@@ -100,3 +100,6 @@ h1, h2, h3, h4, h5{
 .text-yellow{
   color: #F5EA38;
 }
+.pull-right-xs{
+  margin-right: 5px;
+}

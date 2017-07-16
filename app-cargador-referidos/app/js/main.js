@@ -14,18 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	}
 		// })
 
-		console.log(encodedBody)
-
 		for (let i = 0;  i < inputs.length; i++) {
 			if (inputs[i].type != 'submit' ) {
 				encodedBody.append(inputs[i].name.trim(), inputs[i].value.trim())
 			}
 		};
 
-		fetch('http://127.0.0.1:3001/api/leads', {
+		fetch('http://localhost:3001/api/leads', {
 			method: 'POST',
 		  headers: {
-		    "Content-Type": "application/x-www-form-urlencoded"
+		    "content-type": "application/x-www-form-urlencoded"
 		  },
 			body: encodedBody,
 			mode: 'no-cors',
