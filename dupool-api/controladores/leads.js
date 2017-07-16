@@ -25,7 +25,7 @@ function cargarLead (req, res) {
 				mensaje: `Ocurrió un error interno: ${err}`
 			})
 
-		res.status(200).send({lead: leadCargada})
+		res.status(200).send('<span><strong>Referido cargado con exito</strong></span>')
 	})	
 }
 
