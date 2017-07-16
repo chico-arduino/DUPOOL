@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const app = require('./app')
 
-const port = 3001
+const port = 8000
 const dbUrl = "mongodb://localhost:27017/dupool"
 
 mongoose.connect(dbUrl, (err, res) => {
