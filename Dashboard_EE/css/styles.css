@@ -75,3 +75,9 @@ footer {
 .main .page-header {
   margin-top: 0;
 }
+
+.size
+{
+    height: 60px;
+    width: 60px;
+}
