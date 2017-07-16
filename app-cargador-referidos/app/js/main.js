@@ -1,75 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const leadCardContent = `<div class="lead-card ">
-            		<h3><span data-lead-name="Nuevo Lead"></span></h3>
-            		<form id="cargar-lead-1">
-            			<div class="row">
-            				<div class="col-sm-6">
-            					<div class="form-group">
-            						<label for="nombreCliente">Nombre</label>
-            						<input type="text" class="form-control" id="nombreCliente" placeholder="Nombre del cliente">
-            					</div>                
-            				</div>
-            				<div class="col-sm-6">
-            					<div class="form-group">
-            						<label for="apellidoCliente">Apellido</label>
-            						<input type="text" class="form-control" id="apellidoCliente" placeholder="Apellido del cliente">
-            					</div>                
-            				</div>
-            				<div class="col-sm-3">
-            					<div class="form-group">
-            						<label for="rutCliente">RUT</label>
-            						<input type="text" class="form-control" id="rutCliente" placeholder="Número de RUT">
-            					</div>                
-            				</div>
-            				<div class="col-sm-3">
-            					<div class="form-group">
-            						<label for="emailCliente">Email</label>
-            						<input type="email" class="form-control" id="emailCliente" placeholder="mailcliente@email.com">
-            					</div>                
-            				</div>
-            				<div class="col-sm-3">
-            					<div class="form-group">
-            						<label for="tlfCliente">Teléfono</label>
-            						<input type="tel" class="form-control" id="tlfCliente" placeholder="Teléfono cliente">
-            					</div>                
-            				</div>
-            				<div class="col-sm-3">
-            					<div class="form-group">
-            						<label for="celCliente">Celular</label>
-            						<input type="tel" class="form-control" id="celCliente" placeholder="Celular cliente">
-            					</div>                
-            				</div>
 
-            				<div class="col-xs-12">
-            					<div class="form-group">
-            						<label for="direccionCliente">Dirección</label>
-            						<input type="text" class="form-control" id="direccionCliente" placeholder="Dirección del cliente">
-            					</div>                
-            				</div>
+	const formLogin = document.querySelector('#cargador-lead')
 
-            				<div class="col-sm-6">
-            					<div class="form-group">
-            						<label for="regionCliente">Región</label>
-            						<input type="text" class="form-control" id="regionCliente" placeholder="Región">
-            					</div>                
-            				</div>
-            				<div class="col-sm-6">
-            					<div class="form-group">
-            						<label for="comunaCliente">Comuna</label>
-            						<input type="text" class="form-control" id="comunaCliente" placeholder="Comuna">
-            					</div>                
-            				</div>
+	formLogin.addEventListener('submit', (event) => {
+		event.preventDefault()
+		
+		let inputs = document.querySelectorAll('input'),
+			encodedBody = new URLSearchParams();
 
-            				<div class="col-xs-12 text-right">
-            					<button type="submit" class="btn btn-primary alin-derecha">Registrar</button>
-            				</div>
-            			</div>
-            		</form>
-            	</div>`
+		// inputs.map((input) => {
+		// 	if (input.type != 'submit' ) {
+		// 		encodedBody.append(input.name.trim(), input.value.trim())
+		// 	}
+		// })
 
-            	console.log('HTML del lead Card', leadCardContent)
+		console.log(encodedBody)
 
-            	const contenedor = document.getElementById('card-cont')
+		for (let i = 0;  i < inputs.length; i++) {
+			if (inputs[i].type != 'submit' ) {
+				encodedBody.append(inputs[i].name.trim(), inputs[i].value.trim())
+			}
+		};
 
-            	
+		fetch('http://127.0.0.1:3001/api/leads', {
+			method: 'POST',
+		  headers: {
+		    "Content-Type": "application/x-www-form-urlencoded"
+		  },
+			body: encodedBody,
+			mode: 'no-cors',
+			cache: 'default'
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log('data', data)
+		})	
+	});
 })
