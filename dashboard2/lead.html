@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>DUPool</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DUPool</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search...">
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">
+         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Overview</a></li>
+              <li><a href="http://bootstrapzero.com" target="_ext">Themes</a></li>
+              <li><a href="http://bootstrap.theme.cards" target="_ext">Analytics</a></li>
+              <li><a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Nav item</a></li>
+              <li><a href="">Nav item again</a></li>
+              <li><a href="">One more nav</a></li>
+              <li><a href="">Another nav item</a></li>
+              <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Nav item again</a></li>
+              <li><a href="">One more nav</a></li>
+              <li><a href="">Another nav item</a></li>
+            </ul>
+        </div><!--/span-->
+        <div class="col-sm-9 col-md-10 main">
+          <!--toggle sidebar button-->
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+		      <h1 class="page-header">
+            Nuevo Referido
+          </h1>
+          <div class="col-sm-12">
+            <form method="post" action="">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                   <div class="row">
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label for="nombreCliente">Nombre</label>
+                         <input type="text" class="form-control" id="nombreCliente" placeholder="Nombre del cliente">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label for="apellidoCliente">Apellido</label>
+                         <input type="text" class="form-control" id="apellidoCliente" placeholder="Apellido del cliente">
+                       </div>
+                     </div>
+                     <div class="col-sm-3">
+                       <div class="form-group">
+                         <label for="rutCliente">RUT</label>
+                         <input type="text" class="form-control" id="rutCliente" placeholder="Número de RUT">
+                       </div>
+                     </div>
+                     <div class="col-sm-3">
+                       <div class="form-group">
+                         <label for="emailCliente">Email</label>
+                         <input type="email" class="form-control" id="emailCliente" placeholder="mailcliente@email.com">
+                       </div>
+                     </div>
+                     <div class="col-sm-3">
+                       <div class="form-group">
+                         <label for="tlfCliente">Teléfono</label>
+                         <input type="tel" class="form-control" id="tlfCliente" placeholder="Teléfono cliente">
+                       </div>
+                     </div>
+                     <div class="col-sm-3">
+                       <div class="form-group">
+                         <label for="mobileCliente">Móvil</label>
+                         <input type="tel" class="form-control" id="mobileCliente" placeholder="Móvil cliente">
+                       </div>
+                     </div>
+                     <div class="col-sm-12">
+                       <h3>Tipo de Ejecutivo</h3>
+                       <div class="checkbox">
+                         <label>
+                           <input type="checkbox" name="tipoCliente"> Empresa
+                         </label>
+                       </div>
+                       <div class="checkbox">
+                         <label>
+                           <input type="checkbox" name="tipoCliente"> Particular
+                         </label>
+                       </div>
+                     </div><!-- Tipo de cliente -->
+                     <div class="col-xs-12">
+                       <h3>Información de Residencia</h3>
+                       <div class="form-group">
+                         <label for="direccionCliente">Dirección</label>
+                         <input type="text" class="form-control" id="direccionCliente" placeholder="Dirección del cliente">
+                       </div>
+                     </div>
+                     <!-- Extras -->
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label for="regionCliente">Región</label>
+                         <input type="text" class="form-control" id="regionCliente" placeholder="Región">
+                       </div>
+                     </div>
+                     <div class="col-sm-6">
+                       <div class="form-group">
+                         <label for="comunaCliente">Comuna</label>
+                         <input type="text" class="form-control" id="comunaCliente" placeholder="Comuna">
+                       </div>
+                     </div>
+                     <div class="col-xs-12">
+                       <div class="form-group">
+                        <label for="direccionCliente">Comentario</label>
+                        <textarea class="form-control" id="comentarioCliente" rows="4"></textarea>
+                       </div>
+                     </div>
+                   </div>
+                </div>
+              </div>
+              <div class="col-xs-12 text-right">
+                <button type="submit" class="btn btn-primary ma">Registrar</button>
+              </div>
+            </form>
+          </div>
+          <hr>
+      </div><!--/row-->
+	</div>
+</div><!--/.container-->
+<footer>
+  <p class="pull-right">©2016 Company</p>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
