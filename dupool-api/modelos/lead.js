@@ -14,6 +14,8 @@ const LeadSchema = new Schema({
 	email: { type: String, unique: true, lowercase: true },
 	region: String,
 	dir: String,
+	cargo: String,
+	empresa: String,
 	comment: { type: String, lowercase: true, trim: true },
 	FechaCreacion: { type: Date, default: Date.now() },
 	esCliente: Boolean,

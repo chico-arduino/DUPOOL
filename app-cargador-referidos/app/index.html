@@ -66,7 +66,32 @@
             					</div>                
             				</div>
 
-            				<div class="col-xs-12">
+                                    <div class="col-sm-4">
+                                          <div class="form-group">
+                                                <label for="cargoCliente">Cargo</label>
+                                                <input name="cargo" type="text" class="form-control" id="cargoCliente" placeholder="Cargo">
+                                          </div>                
+                                    </div>
+                                    <div class="col-sm-4">
+                                          <div class="form-group">
+                                                <label for="apellidoCliente">Empresa</label>
+                                                <input name="empresa" type="text" class="form-control" id="apellidoCliente" placeholder="Empresa">
+                                          </div>                
+                                    </div>
+                                    <div class="col-sm-4">
+                                          <div class="form-group">
+                                                <label for="franjaCliente">Franja</label>
+                                                <!-- input name="franja" type="text" class="form-control" id="franjaCliente" placeholder="Franja"> -->
+                                                <select name="franja" class="form-control" id="franjaCliente">
+                                                  <option>Amarilla</option>
+                                                  <option>Verde</option>
+                                                  <option>Azul</option>
+                                                </select>
+                                          </div>                
+                                    </div>
+                                    <hr />
+
+            				<div class="col-sm-6">
             					<div class="form-group">
             						<label for="direccionCliente">Dirección</label>
             						<input name="dir" type="text" class="form-control" id="direccionCliente" placeholder="Dirección del cliente">
@@ -79,22 +104,16 @@
             						<input name="region" type="text" class="form-control" id="regionCliente" placeholder="Región">
             					</div>                
             				</div>
-            				<div class="col-sm-6">
-            					<div class="form-group">
-            						<label for="comunaCliente">Comuna</label>
-            						<input name="" type="text" class="form-control" id="comunaCliente" placeholder="Comuna">
-            					</div>                
-            				</div>
 
-            				<div class="col-xs-12 text-right">
-            					<button type="submit" class="btn btn-primary alin-derecha">Registrar</button>
+            				<div class="col-xs-12 text-center">
+            					<button type="submit" class="btn btn-lg btn-primary">Registrar</button>
             				</div>
             			</div>
             		</form>
             	</div>
             	<footer class="col-xs-12 text-center">
             	
-            		<button type="submit" class="btn btn-lg btn-success">Agregar mas Leads</button>
+            		<button type="reset" form="cargador-lead" class="btn btn-md btn-success">Agregar mas Leads</button>
             	</footer>
             </div>
 
